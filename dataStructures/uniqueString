@@ -1,0 +1,32 @@
+package dataStructures;
+import java.util.Hashtable;
+
+
+public class uniqueString {
+	public static void main(String[] args)
+	{
+		 Hashtable<Character, Boolean> uniq=new Hashtable<Character, Boolean>();
+		 String a="abcdefthwezgqwrfweykuolhjl,mk;ptwegc";
+		 int i=0,k=a.length();
+		 while(i<k)
+		 {
+			 if(uniq.get(a.charAt(i))==null)
+			 {
+				 uniq.put(a.charAt(i), true);
+			 }
+			 else
+				 {
+				 System.out.println("Not unique string");break;
+				 }
+			 i++;
+		 }
+		 if(i==k)
+			 System.out.println("Unique String");
+			 
+		 
+
+			
+		
+	}
+
+}
