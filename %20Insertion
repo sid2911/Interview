@@ -1,0 +1,17 @@
+
+public class insertion {
+	public static void main(String[] args){
+		StringBuilder str=new StringBuilder("Mr John Smith");
+		int len=str.length(),i=0;
+		while(i<len){
+			if(str.charAt(i)==' '){
+				str.replace(i, i+1, "%");
+				str.insert(i+1, "20");
+			}
+			i++;
+		}
+		System.out.println(str);
+		
+	}
+
+}
