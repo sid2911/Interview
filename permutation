@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class permutation {
+	public static void main(String[] args){
+		String str="hello",str1="eeeee";
+		int i=0;
+		ArrayList<Character> s=new ArrayList<Character>();
+		ArrayList<Character> s1=new ArrayList<Character>();
+		
+		if(str.length()==str1.length()){
+			while(i<str.length()){
+				s.add(str.charAt(i));
+				s1.add(str1.charAt(i));
+				i++;
+			}
+			Collections.sort(s);
+			Collections.sort(s1);
+			System.out.println(s);
+			System.out.println(s1);
+			if(s.equals(s1))
+				System.out.println("Permutation");
+			else
+				System.out.println("Not Permutation");
+							
+		}
+		else
+			System.out.println("Not Permutation");
+	
+	}
+
+}
