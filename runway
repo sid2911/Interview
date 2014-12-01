@@ -1,0 +1,59 @@
+
+public class node {
+	
+	public int val;
+	public node left,right;
+	
+	public node(int a){
+		val=a;
+		right=left=null;
+	}
+	
+	public void add(node Node){
+		
+		node n=this;
+		while(n!=null){
+			if(Node.val <= n.val){
+				n=n.left;
+			}
+			else{
+				n=n.right;
+			}
+		}
+		n.val=Node.val;
+		n.left=null;
+		n.right=null;
+	}
+	
+	public int height(){
+		
+		int h=0,k=0;
+		node l=this;
+		node r=this;
+		while(l.left!=null){
+			
+			l=l.left;
+			h++;
+		}
+		
+		while(r.right!=null){
+			r=r.right;
+			k++;
+		}
+		
+		if(h>k)
+			return h;
+		else
+			return k;
+	}
+	
+	public void displayTree(){
+		
+		node n=this;
+		for(int i=0;i<n.height();i++){
+			
+		}
+	}
+	
+
+}
